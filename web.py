@@ -33,7 +33,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
   msg.set_content(body)
   msg['Subject'] = 'Upcoming Little Big Meals'
   msg['From'] = "<From Address>"
-  #msg['Bcc'] = "<To Address>"
+  msg['Bcc'] = "<To Address>"
 
 
   server.send_message(msg)
