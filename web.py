@@ -4,6 +4,7 @@ from email.message import EmailMessage
 
     
 results = requests.get("https://www.thefreshmarket.com/specials/little-big-meal")
+results.encoding = "utf-8"
 cleanup = bs4.BeautifulSoup(results.text, 'html.parser')
 meal_elements = cleanup.find_all("div", class_="lbm-card")
   
